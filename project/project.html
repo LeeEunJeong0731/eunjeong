@@ -48,7 +48,7 @@
         background-position: center;
       }
       .nofubao {
-        background-image: url(/스크린샷\ 2023-10-10\ 오후\ 4.57.58.png);
+        background-image: url(/스크린샷\ 2023-10-10\ 오후\ 5.18.28.png);
         width: 100px;
         height: 100px;
         border-radius: 50%;
@@ -60,6 +60,8 @@
     <div id="root">
       <div></div>
       <div>
+        <p>남은시간!</p>
+        <input type="text" id="time" value="20" />
         <p>점수</p>
         <input type="text" id="score" value="0" />
         <p>시작버튼</p>
@@ -70,6 +72,7 @@
       let root = document.getElementById("root");
       let btn = document.getElementById("btn");
       let score = document.getElementById("score");
+      let time = document.getElementById("time");
       let count = 1;
       let maindiv = root.children[0];
 
