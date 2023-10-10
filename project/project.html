@@ -17,6 +17,7 @@
         width: 60vw;
         height: 90vh;
         border: 1px solid black;
+        position: relative;
       }
       #root > div:nth-child(2) {
         width: 30vw;
@@ -28,22 +29,17 @@
         flex-direction: column;
         align-items: center;
       }
-      #time {
-        width: 20vw;
-        height: 30vh;
-        font-size: 4vw;
-        text-align: center;
-      }
-      #score {
-        width: 15vw;
-        height: 15vh;
-        font-size: 4vw;
-        text-align: center;
-      }
       #btn {
         width: 10vw;
         height: 10vw;
         border-radius: 50%;
+      }
+      .fobao {
+        /* background-image: url(/스크린샷\ 2023-10-10\ 오후\ 4.21.19.png); */
+        width: 100px;
+        height: 100px;
+        border-radius: 50%;
+        background-position: center;
       }
     </style>
   </head>
@@ -51,14 +47,36 @@
     <div id="root">
       <div></div>
       <div>
-        <p>남은시간!</p>
-        <input type="text" value="10" id="time" />
-        <p>점수</p>
-        <input type="text" value="0" id="score" />
         <p>시작버튼</p>
         <input type="button" id="btn" />
       </div>
     </div>
-    <script></script>
+    <script>
+      let root = document.getElementById("root");
+      let btn = document.getElementById("btn");
+      let maindiv = root.children[0];
+      let fubaoList = [
+        'url("/스크린샷\ 2023-10-10\ 오후\ 4.21.19.png")',
+        'url("/스크린샷 2023-10-10 오후 4.29.04.png")',
+      ];
+
+      btn.addEventListener("click", function () {
+        let game = setInterval(() => {
+          let fobao = document.createElement("div");
+          maindiv.appendChild(fobao);
+          fobao.classList.add("fobao");
+          fobao.style.position = "absolute";
+          fobao.style.backgroundImage = fubaoList;
+
+          console.log(Math.round(Math.random() * 10) * 60);
+          let x = Math.floor(Math.random() * 10) * 60;
+          let y = Math.floor(Math.random() * 10) * 60;
+          let xString = x.toString();
+          let ySting = y.toString();
+          fobao.style.left = xString + "px";
+          fobao.style.top = ySting + "px";
+        }, 1000);
+      });
+    </script>
   </body>
 </html>
