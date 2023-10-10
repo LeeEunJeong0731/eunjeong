@@ -34,7 +34,13 @@
         height: 10vw;
         border-radius: 50%;
       }
-      .fobao {
+      #score {
+        width: 10vw;
+        height: 10vh;
+        font-size: 2vw;
+        text-align: center;
+      }
+      .fubao {
         /* background-image: url(/스크린샷\ 2023-10-10\ 오후\ 4.21.19.png); */
         width: 100px;
         height: 100px;
@@ -47,6 +53,8 @@
     <div id="root">
       <div></div>
       <div>
+        <p>점수</p>
+        <input type="text" id="score" value="0" />
         <p>시작버튼</p>
         <input type="button" id="btn" />
       </div>
@@ -62,11 +70,11 @@
 
       btn.addEventListener("click", function () {
         let game = setInterval(() => {
-          let fobao = document.createElement("div");
+          let fubao = document.createElement("div");
           maindiv.appendChild(fobao);
-          fobao.classList.add("fobao");
-          fobao.style.position = "absolute";
-          fobao.style.backgroundImage = fubaoList;
+          fubao.classList.add("fobao");
+          fubao.style.position = "absolute";
+          fubao.style.backgroundImage = fubaoList;
 
           console.log(Math.round(Math.random() * 10) * 60);
           let x = Math.floor(Math.random() * 10) * 60;
@@ -76,6 +84,9 @@
           fobao.style.left = xString + "px";
           fobao.style.top = ySting + "px";
         }, 1000);
+        let hander = true;
+        if (hander === true) {
+        }
       });
     </script>
   </body>
