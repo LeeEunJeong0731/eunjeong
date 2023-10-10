@@ -47,6 +47,13 @@
         border-radius: 50%;
         background-position: center;
       }
+      .nofubao {
+        background-image: url(/스크린샷\ 2023-10-10\ 오후\ 4.57.58.png);
+        width: 100px;
+        height: 100px;
+        border-radius: 50%;
+        background-position: center;
+      }
     </style>
   </head>
   <body>
@@ -65,10 +72,6 @@
       let score = document.getElementById("score");
       let count = 1;
       let maindiv = root.children[0];
-      // let fubaoList = [
-      //   'url("/스크린샷\ 2023-10-10\ 오후\ 4.21.19.png")',
-      //   // 'url("/스크린샷 2023-10-10 오후 4.29.04.png")',
-      // ];
 
       btn.addEventListener("click", function () {
         let game = setInterval(() => {
@@ -78,8 +81,8 @@
           fubao.style.position = "absolute";
 
           let nofubao = document.createElement("div");
-          maindiv.appendChild("nofubao");
-          nofubao.className.add("nofubao");
+          maindiv.appendChild(nofubao);
+          nofubao.classList.add("nofubao");
           nofubao.style.position = "absolute";
 
           console.log(Math.round(Math.random() * 10) * 60);
@@ -90,11 +93,18 @@
           fubao.style.left = xString + "px";
           fubao.style.top = ySting + "px";
 
+          let hander = true;
           fubao.addEventListener("click", function () {
             fubao.remove();
-            let hander = true;
             if (hander === true) {
               score.value = count++;
+            }
+          });
+
+          nofubao.addEventListener("click", function () {
+            nofubao.remove();
+            if (hander === true) {
+              score.value = count--;
             }
           });
         }, 1000);
