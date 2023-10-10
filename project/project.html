@@ -23,6 +23,27 @@
         height: 90vh;
         /* background-color: aliceblue; */
         border: 1px solid black;
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        align-items: center;
+      }
+      #time {
+        width: 20vw;
+        height: 30vh;
+        font-size: 4vw;
+        text-align: center;
+      }
+      #score {
+        width: 15vw;
+        height: 15vh;
+        font-size: 4vw;
+        text-align: center;
+      }
+      #btn {
+        width: 10vw;
+        height: 10vw;
+        border-radius: 50%;
       }
     </style>
   </head>
@@ -30,8 +51,11 @@
     <div id="root">
       <div></div>
       <div>
+        <p>남은시간!</p>
         <input type="text" value="10" id="time" />
+        <p>점수</p>
         <input type="text" value="0" id="score" />
+        <p>시작버튼</p>
         <input type="button" id="btn" />
       </div>
     </div>
