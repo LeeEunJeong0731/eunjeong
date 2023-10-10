@@ -3,7 +3,38 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>푸바오찾기</title>
+    <style>
+      #root {
+        width: 100vw;
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        /* background-color: beige; */
+      }
+      #root > div:nth-child(1) {
+        width: 60vw;
+        height: 90vh;
+        border: 1px solid black;
+      }
+      #root > div:nth-child(2) {
+        width: 30vw;
+        height: 90vh;
+        /* background-color: aliceblue; */
+        border: 1px solid black;
+      }
+    </style>
   </head>
-  <body></body>
+  <body>
+    <div id="root">
+      <div></div>
+      <div>
+        <input type="text" value="10" id="time" />
+        <input type="text" value="0" id="score" />
+        <input type="button" id="btn" />
+      </div>
+    </div>
+    <script></script>
+  </body>
 </html>
