@@ -18,11 +18,11 @@
         height: 90vh;
         border: 1px solid black;
         position: relative;
+        background-color: #556b2f;
       }
       #root > div:nth-child(2) {
         width: 30vw;
         height: 90vh;
-        /* background-color: aliceblue; */
         border: 1px solid black;
         display: flex;
         justify-content: center;
@@ -33,6 +33,7 @@
         width: 10vw;
         height: 10vw;
         border-radius: 50%;
+        background-color: green;
       }
       #score {
         width: 10vw;
@@ -130,14 +131,25 @@
           });
           if (timeValue <= 0) {
             clearInterval(game);
-            root.style.width = "100vw";
-            root.style.height = "100vh";
-            root.style.backdropFilter = "blur(5px)";
-            root.style.top = "0px";
-            root.textContent = "당신의 점수는 " + score.value + "점 입니다!";
-            root.style.fontSize = "4vw";
-            root.style.fontWeight = "900";
-            root.style.textAlign = "center";
+            if (score.value > 0) {
+              root.style.width = "100vw";
+              root.style.height = "100vh";
+              root.style.backdropFilter = "blur(5px)";
+              root.style.top = "0px";
+              root.textContent = `당신의 점수는 ${score.value} 입니다. 참잘했어요 🥳`;
+              root.style.fontSize = "4vw";
+              root.style.fontWeight = "900";
+              root.style.textAlign = "center";
+            } else if (score.value < 0) {
+              root.style.width = "100vw";
+              root.style.height = "100vh";
+              root.style.backdropFilter = "blur(5px)";
+              root.style.top = "0px";
+              root.textContent = `당신의 점수는 ${score.value} 입니다. 분발해야겠어요 🥵`;
+              root.style.fontSize = "4vw";
+              root.style.fontWeight = "900";
+              root.style.textAlign = "center";
+            }
           }
         }, 1000);
       });
