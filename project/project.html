@@ -41,7 +41,7 @@
         text-align: center;
       }
       .fubao {
-        /* background-image: url(/스크린샷\ 2023-10-10\ 오후\ 4.21.19.png); */
+        background-image: url(/스크린샷\ 2023-10-10\ 오후\ 4.21.19.png);
         width: 100px;
         height: 100px;
         border-radius: 50%;
@@ -62,31 +62,36 @@
     <script>
       let root = document.getElementById("root");
       let btn = document.getElementById("btn");
+      let score = document.getElementById("score");
+      let count = 1;
       let maindiv = root.children[0];
-      let fubaoList = [
-        'url("/스크린샷\ 2023-10-10\ 오후\ 4.21.19.png")',
-        'url("/스크린샷 2023-10-10 오후 4.29.04.png")',
-      ];
+      // let fubaoList = [
+      //   'url("/스크린샷\ 2023-10-10\ 오후\ 4.21.19.png")',
+      //   // 'url("/스크린샷 2023-10-10 오후 4.29.04.png")',
+      // ];
 
       btn.addEventListener("click", function () {
         let game = setInterval(() => {
           let fubao = document.createElement("div");
-          maindiv.appendChild(fobao);
-          fubao.classList.add("fobao");
+          maindiv.appendChild(fubao);
+          fubao.classList.add("fubao");
           fubao.style.position = "absolute";
-          fubao.style.backgroundImage = fubaoList;
 
           console.log(Math.round(Math.random() * 10) * 60);
           let x = Math.floor(Math.random() * 10) * 60;
           let y = Math.floor(Math.random() * 10) * 60;
           let xString = x.toString();
           let ySting = y.toString();
-          fobao.style.left = xString + "px";
-          fobao.style.top = ySting + "px";
+          fubao.style.left = xString + "px";
+          fubao.style.top = ySting + "px";
+
+          fubao.addEventListener("click", function () {
+            let hander = true;
+            if (hander === true) {
+              score.value = count++;
+            }
+          });
         }, 1000);
-        let hander = true;
-        if (hander === true) {
-        }
       });
     </script>
   </body>
