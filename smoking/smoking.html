@@ -12,7 +12,7 @@
         flex-direction: column;
         justify-content: center;
         align-items: center;
-        background-color: antiquewhite;
+        /* background-color: antiquewhite; */
       }
       #button {
         width: 10vw;
@@ -24,6 +24,7 @@
         display: flex;
         justify-content: start;
         align-items: center;
+        position: relative;
       }
       .ciga > div:nth-child(1) {
         width: 20vw;
@@ -32,10 +33,19 @@
         border: 1px solid black;
       }
       .ciga > div:nth-child(2) {
-        width: 50vw;
-        height: 5vw;
+        width: 500px;
+        height: 70px;
+        background-color: black;
+      }
+      .ciga > div:nth-child(3) {
+        width: 500px;
+        height: 70px;
         background-color: white;
         border: 1px solid black;
+
+        position: absolute;
+        top: 151px;
+        left: 290px;
       }
       .lung {
         width: 50vw;
@@ -54,6 +64,7 @@
       <div class="ciga">
         <div></div>
         <div></div>
+        <div></div>
       </div>
       <div class="lung">
         <div></div>
@@ -63,11 +74,15 @@
       let button = document.getElementById("button");
       let ciga = document.getElementsByClassName("ciga");
       let lung = document.getElementsByClassName("lung");
-      console.dir(ciga);
+      console.dir(ciga[0].children[1]);
 
-      button.addEventListener("mousedown", () => {
-        ciga[0].children[1].style.backgroundColor = "red";
-      });
+      count = 10;
+
+      let smoking = setInterval(() => {
+        button.addEventListener("mousedown", () => {
+          ciga[0].children[2].style.width = `${500 - count++}px`;
+        });
+      }, 500);
     </script>
   </body>
 </html>
