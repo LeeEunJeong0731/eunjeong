@@ -25,8 +25,8 @@
         justify-content: start;
         align-items: center;
       }
-      .clga > div:nth-child(1) {
-        width: 10vw;
+      .ciga > div:nth-child(1) {
+        width: 20vw;
         height: 5vw;
         background-color: burlywood;
         border: 1px solid black;
@@ -63,6 +63,11 @@
       let button = document.getElementById("button");
       let ciga = document.getElementsByClassName("ciga");
       let lung = document.getElementsByClassName("lung");
+      console.dir(ciga);
+
+      button.addEventListener("mousedown", () => {
+        ciga[0].children[1].style.backgroundColor = "red";
+      });
     </script>
   </body>
 </html>
