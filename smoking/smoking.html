@@ -42,19 +42,21 @@
         height: 70px;
         background-color: white;
         border: 1px solid black;
-
         position: absolute;
-        top: 151px;
+        top: 140px;
         left: 290px;
       }
       .lung {
         width: 50vw;
         height: 50vh;
+        display: flex;
+        position: relative;
       }
-      .lung > div {
-        width: 40vw;
-        height: 40vh;
-        background-color: black;
+      .lung > div:nth-child(1) {
+        width: 400px;
+        height: 400px;
+        background-image: url(/pngwing.com.png);
+        background-size: cover;
       }
     </style>
   </head>
@@ -68,6 +70,9 @@
       </div>
       <div class="lung">
         <div></div>
+        <div>
+          <div></div>
+        </div>
       </div>
     </div>
     <script>
@@ -76,7 +81,7 @@
       let lung = document.getElementsByClassName("lung");
       console.dir(ciga[0].children[1]);
 
-      count = 10;
+      count = 20;
 
       let smoking = setInterval(() => {
         button.addEventListener("click", () => {
