@@ -88,8 +88,21 @@
       let smoking = setInterval(() => {
         button.addEventListener("click", () => {
           ciga[0].children[2].style.width = `${500 - count++}px`;
-          if (ciga[0].children[2].style.width === "0px") {
+          if (ciga[0].children[2].style.width <= "10px") {
+            clearInterval(smoking);
             lungs.style.color = "black";
+          }
+          const cigaWidth = ciga[0].children[2].style.width;
+          if (cigaWidth === "0px") {
+            console.log("q");
+            root.style.width = "100vw";
+            root.style.height = "100vh";
+            root.style.backdropFilter = "blur(5px)";
+            root.style.top = "0px";
+            root.textContent = "담배는 몸에 좋지 않아요 🙅‍♀️";
+            root.style.fontSize = "4vw";
+            root.style.fontWeight = "900";
+            root.style.textAlign = "center";
           }
         });
       }, 1000);
