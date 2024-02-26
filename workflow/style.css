@@ -39,7 +39,7 @@ input {
   width: 10vw;
   height: 20vh;
   border: 1px solid black;
-  background-image: url("/img/meet.png");
+  background-image: url('https://stellatalk.s3.ap-northeast-2.amazonaws.com/image/img/meet.png');
   background-position: center;
   background-size: cover;
 }
@@ -47,14 +47,14 @@ input {
   width: 10vw;
   height: 20vh;
   border: 1px solid black;
-  background-image: url("/img/no.png");
+  background-image: url('https://stellatalk.s3.ap-northeast-2.amazonaws.com/image/img/no.png');
   background-size: cover;
 }
 #root > div:nth-child(1) > div:nth-child(3) {
   width: 10vw;
   height: 20vh;
   border: 1px solid black;
-  background-image: url("/img/daefa.png");
+  background-image: url('https://stellatalk.s3.ap-northeast-2.amazonaws.com/image/img/daefa.png');
   background-position: center;
   background-size: cover;
 }
@@ -62,7 +62,7 @@ input {
   width: 10vw;
   height: 20vh;
   border: 1px solid black;
-  background-image: url("/img/dooboo.png");
+  background-image: url('https://stellatalk.s3.ap-northeast-2.amazonaws.com/image/img/dooboo.png');
   background-position: center;
   background-size: cover;
 }
@@ -70,7 +70,7 @@ input {
   width: 10vw;
   height: 20vh;
   border: 1px solid black;
-  background-image: url("/img/remon.png");
+  background-image: url('https://stellatalk.s3.ap-northeast-2.amazonaws.com/image/img/remon.png');
   background-position: center;
   background-size: cover;
 }
@@ -78,7 +78,7 @@ input {
   width: 10vw;
   height: 20vh;
   border: 1px solid black;
-  background-image: url("/img/rich.png");
+  background-image: url('https://stellatalk.s3.ap-northeast-2.amazonaws.com/image/img/rich.png');
   background-position: center;
   background-size: cover;
 }
@@ -86,7 +86,7 @@ input {
   width: 10vw;
   height: 20vh;
   border: 1px solid black;
-  background-image: url("/img/baechu.png");
+  background-image: url('https://stellatalk.s3.ap-northeast-2.amazonaws.com/image/img/baechu.png');
   background-position: center;
   background-size: cover;
 }
@@ -94,7 +94,7 @@ input {
   width: 10vw;
   height: 20vh;
   border: 1px solid black;
-  background-image: url("/img/mushiroom.png");
+  background-image: url('https://stellatalk.s3.ap-northeast-2.amazonaws.com/image/img/mushiroom.png');
   background-position: center;
   background-size: cover;
 }
@@ -102,7 +102,7 @@ input {
   width: 10vw;
   height: 20vh;
   border: 1px solid black;
-  background-image: url("/img/saewoo.png");
+  background-image: url('https://stellatalk.s3.ap-northeast-2.amazonaws.com/image/img/saewoo.png');
   background-position: center;
   background-size: cover;
 }
@@ -110,7 +110,7 @@ input {
   width: 10vw;
   height: 20vh;
   border: 1px solid black;
-  background-image: url("/img/powder.png");
+  background-image: url('https://stellatalk.s3.ap-northeast-2.amazonaws.com/image/img/powder.png');
   background-position: center;
   background-size: cover;
 }
@@ -118,7 +118,7 @@ input {
   width: 10vw;
   height: 20vh;
   border: 1px solid black;
-  background-image: url("/img/water.png");
+  background-image: url('https://stellatalk.s3.ap-northeast-2.amazonaws.com/image/img/water.png');
   background-position: center;
   background-size: cover;
 }
@@ -126,7 +126,7 @@ input {
   width: 10vw;
   height: 20vh;
   border: 1px solid black;
-  background-image: url("/img/yangpa.png");
+  background-image: url('https://stellatalk.s3.ap-northeast-2.amazonaws.com/image/img/yangpa.png');
   background-position: center;
   background-size: cover;
 }
@@ -134,15 +134,14 @@ input {
   width: 10vw;
   height: 20vh;
   border: 1px solid black;
-  background-image: url("/img/kong.png");
-  background-position: center;
+  background-image: url('https://stellatalk.s3.ap-northeast-2.amazonaws.com/image/img/kong.png');
   background-size: cover;
 }
 #root > div:nth-child(1) > div:nth-child(14) {
   width: 10vw;
   height: 20vh;
   border: 1px solid black;
-  background-image: url("/img/juice.png");
+  background-image: url('https://stellatalk.s3.ap-northeast-2.amazonaws.com/image/img/juice.png');
   background-position: center;
   background-size: cover;
 }
