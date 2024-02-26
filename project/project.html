@@ -42,14 +42,14 @@
         text-align: center;
       }
       .fubao {
-        background-image: url(/스크린샷\ 2023-10-10\ 오후\ 5.40.00.png);
+        background-image: url('스크린샷\ 2023-10-10\ 오후\ 5.40.00.png');
         width: 130px;
         height: 130px;
         border-radius: 50%;
         background-position: center;
       }
       .nofubao {
-        background-image: url(/스크린샷\ 2023-10-10\ 오후\ 5.41.07.png);
+        background-image: url('./스크린샷\ 2023-10-10\ 오후\ 5.41.07.png');
         width: 130px;
         height: 130px;
         border-radius: 50%;
@@ -74,10 +74,10 @@
       </div>
     </div>
     <script>
-      let root = document.getElementById("root");
-      let btn = document.getElementById("btn");
-      let score = document.getElementById("score");
-      let time = document.getElementById("time");
+      let root = document.getElementById('root');
+      let btn = document.getElementById('btn');
+      let score = document.getElementById('score');
+      let time = document.getElementById('time');
       let count = 1;
       let miunscount = 0;
       let maindiv = root.children[0];
@@ -92,38 +92,38 @@
           }
         }, 1000);
       }
-      btn.addEventListener("click", function () {
+      btn.addEventListener('click', function () {
         timer();
         let game = setInterval(() => {
-          let fubao = document.createElement("div");
+          let fubao = document.createElement('div');
           maindiv.appendChild(fubao);
-          fubao.classList.add("fubao");
-          fubao.style.position = "absolute";
+          fubao.classList.add('fubao');
+          fubao.style.position = 'absolute';
 
-          let nofubao = document.createElement("div");
+          let nofubao = document.createElement('div');
           maindiv.appendChild(nofubao);
-          nofubao.classList.add("nofubao");
-          nofubao.style.position = "absolute";
+          nofubao.classList.add('nofubao');
+          nofubao.style.position = 'absolute';
 
           let x = Math.floor(Math.random() * 10) * 60;
           let y = Math.floor(Math.random() * 10) * 60;
           let xString = x.toString();
           let ySting = y.toString();
-          fubao.style.left = xString + "px";
-          fubao.style.top = ySting + "px";
+          fubao.style.left = xString + 'px';
+          fubao.style.top = ySting + 'px';
 
-          nofubao.style.right = xString + "px";
-          nofubao.style.bottom = ySting + "px";
+          nofubao.style.right = xString + 'px';
+          nofubao.style.bottom = ySting + 'px';
 
           let hander = true;
-          fubao.addEventListener("click", function () {
+          fubao.addEventListener('click', function () {
             fubao.remove();
             if (hander === true) {
               score.value = count++;
             }
           });
 
-          nofubao.addEventListener("click", function () {
+          nofubao.addEventListener('click', function () {
             nofubao.remove();
             if (hander === true) {
               score.value = miunscount--;
@@ -132,23 +132,23 @@
           if (timeValue <= 0) {
             clearInterval(game);
             if (score.value > 0) {
-              root.style.width = "100vw";
-              root.style.height = "100vh";
-              root.style.backdropFilter = "blur(5px)";
-              root.style.top = "0px";
+              root.style.width = '100vw';
+              root.style.height = '100vh';
+              root.style.backdropFilter = 'blur(5px)';
+              root.style.top = '0px';
               root.textContent = `당신의 점수는 ${score.value} 입니다. 참잘했어요 🥳`;
-              root.style.fontSize = "4vw";
-              root.style.fontWeight = "900";
-              root.style.textAlign = "center";
+              root.style.fontSize = '4vw';
+              root.style.fontWeight = '900';
+              root.style.textAlign = 'center';
             } else if (score.value < 0) {
-              root.style.width = "100vw";
-              root.style.height = "100vh";
-              root.style.backdropFilter = "blur(5px)";
-              root.style.top = "0px";
+              root.style.width = '100vw';
+              root.style.height = '100vh';
+              root.style.backdropFilter = 'blur(5px)';
+              root.style.top = '0px';
               root.textContent = `당신의 점수는 ${score.value} 입니다. 분발해야겠어요 🥵`;
-              root.style.fontSize = "4vw";
-              root.style.fontWeight = "900";
-              root.style.textAlign = "center";
+              root.style.fontSize = '4vw';
+              root.style.fontWeight = '900';
+              root.style.textAlign = 'center';
             }
           }
         }, 1000);
